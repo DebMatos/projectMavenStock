@@ -1,0 +1,10 @@
+io\altar\stock\repositories\ProductRepository.class
+io\altar\stock\model\Product.class
+io\altar\stock\repositories\ShelfRepository.class
+io\altar\stock\repositories\EntityRepository.class
+io\altar\stock\model\Entity.class
+io\altar\stock\service\ShelfControler.class
+io\altar\stock\stock\App.class
+io\altar\stock\service\ProductControler.class
+io\altar\stock\stock\EndPoints.class
+io\altar\stock\model\Shelf.class
