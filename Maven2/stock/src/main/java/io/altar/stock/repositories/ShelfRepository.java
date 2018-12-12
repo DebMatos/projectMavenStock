@@ -11,6 +11,20 @@ public class ShelfRepository extends EntityRepository <Shelf>{
 		
 		
 		private ShelfRepository(){}
+
+
+		@Override
+		protected Class<Shelf> getEntityClass() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+
+		@Override
+		protected String getAllEntityQueryName() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 		
 	}
 

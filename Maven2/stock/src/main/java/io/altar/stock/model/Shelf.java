@@ -1,6 +1,10 @@
 package io.altar.stock.model;
 
-public class Shelf extends Entity {
+import javax.persistence.Entity;
+
+@Entity
+public class Shelf extends baseEntity {
+	private static final long serialVersionUID = 1L;
 
 	private String capacity;
 	private Long productId;
@@ -43,6 +47,7 @@ public class Shelf extends Entity {
 
 		this.rentPrice = rentPrice;
 	}
+	public Shelf() {}
 
 	@Override
 	public String toString() {

@@ -3,14 +3,27 @@ package io.altar.stock.service;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import javax.inject.Inject;
+import javax.transaction.Transactional;
+
 import io.altar.stock.model.Product;
 import io.altar.stock.model.Shelf;
 import io.altar.stock.repositories.ProductRepository;
 import io.altar.stock.repositories.ShelfRepository;
 
 public class ProductControler {
+	
+	
+	@Inject
+	private static ProductRepository productRepository;
+	
+	@Transactional
+	public static void createProduct(Product product1) {
+		
+		productRepository.save(product1);
+	}
+	
 
-	static ProductRepository productRepository = ProductRepository.getInstance();
 	static ShelfRepository shelfRepository = ShelfRepository.getInstance();
 
 	public static boolean isEmpty() {

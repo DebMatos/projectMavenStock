@@ -2,7 +2,16 @@ package io.altar.stock.model;
 
 import java.util.ArrayList;
 
-public class Product extends Entity{
+import javax.persistence.Entity;
+
+@Entity
+public class Product extends baseEntity{
+	
+	
+	private static final long serialVersionUID = 1L;
+	
+	//@OneToMany(fetch = FetchType.LAZY, mappedBy = "produtoAlberga")
+
 	
 	private ArrayList<Long> shelvesId;
 	private double discountValue;
@@ -10,6 +19,7 @@ public class Product extends Entity{
 	private double pvp;
 	
 	
+	public Product() {}
 	
 	public Product( ArrayList<Long> shelvesId, double discountValue, double iva, double pvp) {
 		this.shelvesId = shelvesId;
