@@ -13,7 +13,7 @@ public class Product extends baseEntity{
 	//@OneToMany(fetch = FetchType.LAZY, mappedBy = "produtoAlberga")
 
 	
-	private ArrayList<Long> shelvesId;
+	private ArrayList<Shelf> shelves;
 	private double discountValue;
 	private double iva;
 	private double pvp;
@@ -21,8 +21,8 @@ public class Product extends baseEntity{
 	
 	public Product() {}
 	
-	public Product( ArrayList<Long> shelvesId, double discountValue, double iva, double pvp) {
-		this.shelvesId = shelvesId;
+	public Product( ArrayList<Shelf> shelves, double discountValue, double iva, double pvp) {
+		this.shelves = shelves;
 		this.discountValue = discountValue;
 		this.iva = iva;
 		this.pvp = pvp;
@@ -34,12 +34,12 @@ public class Product extends baseEntity{
 		this.pvp = pvp;
 	}
 
-	public ArrayList<Long> getShelvesId() {
-		return shelvesId;
+	public ArrayList<Shelf> getShelvesId() {
+		return shelves;
 	}
 
 	public void setShelvesId(ArrayList<Long> shelvesId) {
-		this.shelvesId = shelvesId;
+		this.shelves = shelves;
 	}
 	public double getDiscountValue() {
 		return discountValue;
@@ -62,7 +62,7 @@ public class Product extends baseEntity{
 	@Override
 	public String toString() {
 		
-		return "Product " +this.getId()+ "[shelvesId=" + shelvesId + ", discountValue=" + discountValue + ", iva=" + iva + ", pvp=" + pvp
+		return "Product " +this.getId()+ "[shelvesId=" + shelves + ", discountValue=" + discountValue + ", iva=" + iva + ", pvp=" + pvp
 				+ "]";
 	}
 

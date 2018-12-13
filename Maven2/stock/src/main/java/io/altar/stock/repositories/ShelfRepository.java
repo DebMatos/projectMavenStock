@@ -20,11 +20,7 @@ public class ShelfRepository extends EntityRepository <Shelf>{
 		}
 
 
-		@Override
-		protected String getAllEntityQueryName() {
-			// TODO Auto-generated method stub
-			return null;
-		}
+		
 		
 	}
 

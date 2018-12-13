@@ -7,7 +7,7 @@ public class Shelf extends baseEntity {
 	private static final long serialVersionUID = 1L;
 
 	private String capacity;
-	private Long productId;
+	private Product product;
 	private double rentPrice;
 
 	public String getCapacity() {
@@ -18,12 +18,12 @@ public class Shelf extends baseEntity {
 		this.capacity = capacity;
 	}
 
-	public Long getProduct() {
-		return productId;
+	public Product getProduct() {
+		return product;
 	}
 
-	public void setProduct(Long productId) {
-		this.productId = productId;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
 	public double getRentPrice() {
@@ -34,10 +34,10 @@ public class Shelf extends baseEntity {
 		this.rentPrice = rentPrice;
 	}
 
-	public Shelf(String capacity, Long productId, double rentPrice) {
+	public Shelf(String capacity,Product product, double rentPrice) {
 
 		this.capacity = capacity;
-		this.productId = productId;
+		this.product = product;
 		this.rentPrice = rentPrice;
 	}
 
@@ -51,7 +51,7 @@ public class Shelf extends baseEntity {
 
 	@Override
 	public String toString() {
-		return "Shelf " + getId() + "[capacity=" + capacity + ", productId=" + productId + ", rentPrice=" + rentPrice
+		return "Shelf " + getId() + "[capacity=" + capacity + ", productId=" + product + ", rentPrice=" + rentPrice
 				+ "]";
 	}
 

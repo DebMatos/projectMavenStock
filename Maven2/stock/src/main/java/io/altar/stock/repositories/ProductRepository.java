@@ -11,6 +11,12 @@ public class ProductRepository  extends EntityRepository <Product> {
 	public static ProductRepository getInstance(){
 		return INSTANCE;
 	}
+
+	@Override
+	protected Class<Product> getEntityClass() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

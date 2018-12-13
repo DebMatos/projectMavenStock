@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
 
 
 
-public abstract class EntityRepository implements Serializable {
+public abstract class EntityRepository <T> implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@PersistenceContext
@@ -23,11 +23,7 @@ public abstract class EntityRepository implements Serializable {
 
 
 
-	
-
-	
-
-	public void save(T entidade) {
+	public T save(T entidade) {
 		return entityManager.merge(entidade);
 
 	}
@@ -41,28 +37,12 @@ public abstract class EntityRepository implements Serializable {
 		entityManager.remove(id);
 	}
 
-	public void updateById(T entidade) {
+	public T updateById(T entidade) {
 
 		return entityManager.merge(entidade);
 
 	}
 
-	public Iterator<T> getAll() {
-		return map.values().iterator();
-	}
-
-	public void size() {
-		map.size();
-
-	}
-
-	public boolean isEmpty() {
-		if (map.isEmpty()) {
-			return true;
-		} else {
-			return false;
-		}
-		
-	}
+	
 	protected abstract Class<T> getEntityClass();
 }
